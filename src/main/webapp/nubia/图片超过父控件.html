@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>图片超过父控件</title>
+    <style>
+
+        .father {
+            width: 500px;
+            height: 500px;
+            border: 3px solid red;
+            margin: 100px auto;
+            /*position: relative;*/
+            text-align: center;
+        }
+
+        .son {
+            /*position: absolute;*/
+            /*left: 50%;*/
+            /*margin-left: -532px;*/
+            margin: 0 -100%;
+        }
+
+        /*
+            当一个图片超过父控件, 怎么把图片居中呢?
+            如果图片没有超过,可以用text-align属性
+            超过了,可以用定位流居中, 但是这个需要三行代码, 还需要知道图片的大小
+
+
+            还有一种方法就是 margin: 0 -100%; 父控件里需要text-align:center;
+        */
+    </style>
+</head>
+<body>
+
+<div class="father">
+    <img src="images/video1.jpg" alt="" class="son">
+</div>
+
+</body>
+</html>
